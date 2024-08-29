@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>votingpoll</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family:arial;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+			justify-content:center;
+			align-items: center;
+			background-image: url(https://t4.ftcdn.net/jpg/04/18/24/15/360_F_418241563_tjvYcmLJvyG0v4kd3APD1jQQr3CLa46J.jpg);	
+			background-size: 68vw 110vh;
+
+
+		}
+		
+		.container{
+			display: inline-block;
+			position: relative;
+			top: 40px;
+			border: 2px solid;
+			height: 500px;
+			width: 400px;
+		}
+		table{
+			color: rgba(0, 0, 0, 1.0);
+			backdrop-filter: blur(10px);
+	}
+	th{
+		font-size: 22px;
+		text-decoration: underline;
+	}
+	table tr td
+	{
+		text-align: center;
+	}
+		table tr td img{
+			height: 95px;
+			width: 120px;
+			border-radius: 100px;
+		}
+		table tr td input{
+			height: 40px;
+			width: 110px;
+			border-radius: 30px;
+			font-size: 20px;
+			outline: none;
+			border:none;
+			color: rgba(144, 155, 255, 0.5);
+			background-color: rgba(0, 10, 0, 0.4);
+			transition: 1.0s;
+		}
+		table tr td input:hover{
+			cursor: pointer;
+			transform: scale(1.2);
+			color: white;
+			background-color: rgba(0, 0, 0, 0.6);
+			z-index: 2;
+		}
+		table tr th{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <img id="imgs" src="https://t4.ftcdn.net/jpg/04/16/02/87/360_F_416028708_M4Cnj2FbPDD7qFn85DhVyZNJU22AR16d.jpg"> -->
+	<div class="informations">
+		<marquee><h1 style="margin-bottom: 30px;">Voting is the fundamental right of every humans</h1></marquee>
+	</div>
+	<form method="post" action="connect2.php">
+		
+	<table border="2px" >
+		<tr>
+			<th>SL NO.</th>
+			<th colspan="2">PROGRAMING LANGUAGES</th>
+			<th>VOTE CASTING.</th>
+		</tr>
+		<tr>
+			<td><h1>1.</h1></td>
+			<td><img src="https://imgs.search.brave.com/XMstToLjJtlhELmqbjWdxuvnGKqKFyKqwNWO6GHf9Wc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZmF2cG5nLmNvbS8x/NS8yNC85L2phdmEt/cnVudGltZS1lbnZp/cm9ubWVudC1wcm9n/cmFtbWluZy1sYW5n/dWFnZS1wcm9ncmFt/bWVyLWNvbXB1dGVy/LXByb2dyYW1taW5n/LXBuZy1mYXZwbmct/RkRCRFNiWUNFMFBT/R0JQTkVIek1aRzd5/Ml90LmpwZw"> </td>
+			<td>JAVA</td>
+			<td><input type="submit" value="vote" name="java" onclick="voter('java')"></td>
+		</tr>
+		<tr>
+			<td><h1>2.</h1></td>
+			<td><img src="https://imgs.search.brave.com/dohBmC3BFOacmT5S6onvGrrg6S6GaXWWLkNUMg44o_4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MTAvUHl0aG9uLVN5/bWJvbC03MDB4Mzk0/LnBuZw"> </td>
+			<td>PYTHON</td>
+			<td><input type="submit" value="vote" name="python" onclick="voter('python')"></td>
+		</tr>
+		<tr>
+			<td><h1>3.</h1></td>
+			<td><img src="https://imgs.search.brave.com/4tMG6Jv7dVGyhcCCOIC87sYuk3Es4TTcUSU1RyTg1lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29tcHV0ZXJob3Bl/LmNvbS9qYXJnb24v/aC9odG1sLnBuZw"> </td>
+			<td>HTML</td>
+			<td><input type="submit" value="vote" name="html" onclick="voter('html')"></td>
+		</tr>
+		<tr>
+			<td><h1>4.</h1></td>
+			<td><img src="https://imgs.search.brave.com/VEghodRkM-Hr7s053BXxc38ZpYEGbmEaW3HFWxAzjxg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuamF2YXRwb2lu/dC5jb20vcGhwcGFn/ZXMvaW1hZ2VzL3Bo/cC10dXRvcmlhbC5w/bmc"> </td>
+			<td>PHP</td>
+			<td><input type="submit" value="vote" name="php" onclick="voter('php')"></td>
+		</tr>
+		<tr>
+			<td><h1>5.</h1></td>
+
+			<td><img src="https://imgs.search.brave.com/UXY-B1Z3a9wxJFsOXw61JfBUvLgYGelI_a8buu0A1zk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2FtLXNvbHV0aW9u/cy5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOS8w/Ny9pbWFnZS1yZWNv/Z25pdGlvbi1DLXBy/b2dyYW1taW5nLWxh/bmd1YWdlLmpwZw"> </td>
+			<td>C</td>
+			<td><input type="submit" value="vote" name="C" onclick="voter('c')"></td>
+		</tr>
+	</table>
+	<input type="text" name="ref" hidden id="emptytext">
+	</form>
+	<script >
+		var z="";
+		function voter(a) {
+			document.getElementById('emptytext').value=a;
+		}
+	</script>
+</body>
+</html>
